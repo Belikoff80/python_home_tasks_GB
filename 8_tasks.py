@@ -13,6 +13,10 @@ A = []
 for i in range(1,a+1):
     s = b*i
     A.append(s)
+for i in range(1,b+1):
+    s = a*i
+    A.append(s)
+    
 if k in A:
     print('Yes')
 else:
