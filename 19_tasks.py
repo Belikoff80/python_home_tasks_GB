@@ -23,3 +23,41 @@
 # “количества”: [5, 2, 7],
 # “ед”: [“шт.”]
 # }
+
+
+
+goods = int(input('Введите количество товаров для анализа: '))
+stock_list=[]
+list_product = []
+list_prices = []
+list_unit = []
+list_mesure = []
+# функция для составление кортежа
+def set_list(a,b,c,d):
+    n = {}
+    tuple_unit=()
+    n['название'] = a
+    n['цена'] = b
+    n['количество']= c
+    n['ед'] = d
+    tuple_unit = (i+1, n)
+    return tuple_unit
+# цикл для формирования структуры и для аналитики
+for i in range(goods):
+    data_1 = input('Введите название товара: ')
+    data_2 = int(input('Введите стоимость товара: '))
+    data_3 = int(input('Введите количество товара: '))
+    data_4 = input('Введите единицы измерения товара: ')
+    stock_list.append(set_list(data_1, data_2, data_3, data_4)) 
+    list_product.append(data_1)
+    list_prices.append(data_2)
+    list_unit.append(data_3)
+    list_mesure.append(data_4)
+# создаем словарь для аналитики
+anal_dict={}
+anal_dict['название'] = list_product
+anal_dict['цена'] = list_prices
+anal_dict['количество'] = list_unit
+anal_dict['ед'] = list_mesure
+print(stock_list)
+print(anal_dict)

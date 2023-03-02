@@ -7,3 +7,13 @@
 # *Пример:*
 
 # 5
+
+list_num = list(i for i in range (1,1+int(input('Введите верхнюю границу массива: '))))
+digit_count = int(input('Введите заданное число: '))
+if list_num[0] > digit_count:
+    print(f'Самый близкий по величине элемент массива к заданному числу: {list_num[0]}')
+elif list_num[len(list_num)-1] < digit_count:
+    print(f'Самый близкий по величине элемент массива к заданному числу: {list_num[len(list_num)-1]}')
+else:
+    print(f'Самый близкий по величине элемент массива к заданному числу: {digit_count}')
+

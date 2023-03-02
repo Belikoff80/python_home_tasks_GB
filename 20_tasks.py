@@ -8,3 +8,13 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
+
+list_num = list(i for i in range (int(input('Введите верхнюю границу массива: '))))
+digit_count = (input('Введите число, которое необходимо поссчитать: '))
+str_list = str()
+for i in range(len(list_num)):
+    str_list += str(i+1)
+
+
+print(f'Массив: {list_num}')
+print(f'-> число <{digit_count}> встречается в массиве {str_list.count(str(digit_count))} раз')
